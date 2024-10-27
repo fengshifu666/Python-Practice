@@ -1,0 +1,33 @@
+def exclusive_or(input1, input2):  
+    output = -1  
+       
+    if input1 > 1 or input1 < 0 or input2 > 1 or input2 < 0:  
+        print("Error input!!!")  
+    else:  
+        if (input1 == 1 and input2 == 1) or (input1 == 0 and input2 == 0):  
+            output = 0  
+        else:  
+            output = 1  
+      
+    return output  
+  
+def main():  
+    input1 = None  
+    input2 = None  
+    result = None  
+      
+    print("please input two logic values (0 or 1):")  
+      
+    try:  
+        input1, input2 = map(int, input().split())  
+    except ValueError:  
+        print("Invalid input! Please enter integers.")  
+        return  
+       
+    result = exclusive_or(input1, input2)  
+      
+    if result != -1:  
+        print("The result is:", result)  
+  
+if __name__ == "__main__":  
+    main()
